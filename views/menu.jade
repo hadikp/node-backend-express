@@ -1,24 +1,21 @@
-extends layout
-
-block menu
-        // Nav Item - Dashboard
-        li.nav-item
-          a.nav-link(href='index.html')
-            i.fas.fa-fw.fa-tachometer-alt
-            span Dashboard
-        // Divider
-        hr.sidebar-divider
-        // Heading
-        .sidebar-heading
-          | Interface
-        // Nav Item - Pages Collapse Menu
-        li.nav-item
-          a.nav-link.collapsed(href='#' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo')
-            i.fas.fa-fw.fa-cog
-            span Components
-          #collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#accordionSidebar')
-            .bg-white.py-2.collapse-inner.rounded
-              h6.collapse-header Custom Components:
+// Nav Item - Dashboard
+li.nav-item
+  a.nav-link(href='index.html')
+    i.fas.fa-fw.fa-tachometer-alt
+    span Dashboard
+// Divider
+hr.sidebar-divider
+// Heading
+.sidebar-heading
+    | Interface
+// Nav Item - Pages Collapse Menu
+li.nav-item
+  a.nav-link.collapsed(href='#' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo')
+    i.fas.fa-fw.fa-cog
+      span Components
+    #collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#accordionSidebar')
+      .bg-white.py-2.collapse-inner.rounded
+        h6.collapse-header Custom Components:
               a.collapse-item(href='buttons.html') Buttons
               a.collapse-item(href='cards.html') Cards
         // Nav Item - Utilities Collapse Menu
@@ -184,18 +181,3 @@ block menu
                 a#userDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
                   span.mr-2.d-none.d-lg-inline.text-gray-600.small Douglas McGee
                   img.img-profile.rounded-circle(src='img/undraw_profile.svg')
-                // Dropdown - User Information
-                .dropdown-menu.dropdown-menu-right.shadow.animated--grow-in(aria-labelledby='userDropdown')
-                  a.dropdown-item(href='#')
-                    i.fas.fa-user.fa-sm.fa-fw.mr-2.text-gray-400
-                    |                                     Profile
-                  a.dropdown-item(href='#')
-                    i.fas.fa-cogs.fa-sm.fa-fw.mr-2.text-gray-400
-                    |                                     Settings
-                  a.dropdown-item(href='#')
-                    i.fas.fa-list.fa-sm.fa-fw.mr-2.text-gray-400
-                    |                                     Activity Log
-                  .dropdown-divider
-                  a.dropdown-item(href='#' data-toggle='modal' data-target='#logoutModal')
-                    i.fas.fa-sign-out-alt.fa-sm.fa-fw.mr-2.text-gray-400
-                    |                                     Logout

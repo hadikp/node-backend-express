@@ -14,8 +14,8 @@ Instructions on how to use them in your own application are linked below.
 
 | Kiegészítők | internet helye |
 | ------ | ------ |
-| Bootstrap templates | [https://startbootstrap.com/][PlGh] |
-| HTML Jade fordító | [https://html2jade.org/][PlGh] |
+| Bootstrap templates | [https://startbootstrap.com/][SB] |
+| HTML Jade fordító | [https://html2jade.org/][HJadeO] |
 
 
 A program a következő porton fut:
@@ -28,8 +28,8 @@ http://localhost:3000/
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
+   [SB]: <[https://startbootstrap.com/>
+   [HJadeO]: <https://html2jade.org/>
    [john gruber]: <http://daringfireball.net>
    [df1]: <http://daringfireball.net/projects/markdown/>
    [markdown-it]: <https://github.com/markdown-it/markdown-it>
