@@ -7,7 +7,13 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/ingredients', function(req, res, next) {
+  //kell ide model
   res.render('ingredients', { title: 'Étel összetevők listája' });
+});
+
+router.get('/form', function(req, res, next) {
+  //kell ide model
+  res.render('bill_form', { title: 'Étel összetevők listája' });
 });
 
 module.exports = router;
