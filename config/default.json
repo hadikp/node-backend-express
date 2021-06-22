@@ -1,0 +1,8 @@
+{
+    "database": {
+        "username": "hadikp",
+        "password": "oRpBs4leEZNwOeyi",
+        "host": "cluster0.5nggx.mongodb.net/Kurzus?retryWrites=true&w=majority"
+    },
+    "port": 3000
+}
