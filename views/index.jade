@@ -2,7 +2,29 @@ extends layout
 
 block content
   main
-    .row
-      .col-lg-12
-        h1 Ez itt az index tartalom helye Ez itt az index tartalom helye Ez itt az index tartalom helye
-   
+    .container
+      .row
+        .col-lg-12
+          a.btn.btn-primary.ml-auto.mr-auto(href='#' role='button') Új számla
+      .row
+        .col-xs-12
+          table.table.table-striped
+            thead
+              tr
+                th #
+                th Számla neve
+                th Megrendelő
+                th Számla értéke
+                th gombok
+                th
+            tbody
+              - var nth = 0
+              each bill in bills
+                -nth++
+                tr
+                  td=nth
+                  td=bill.billName
+                  td=bill.shopper
+                  td=bill.count
+            
+              
