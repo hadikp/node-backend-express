@@ -3,16 +3,10 @@ var router = express.Router();
 var app = express();
 var config = require('config');
 var mongoose = require('mongoose');
-const billModel = require('../model/bil.model');
+var billModel = require('../model/bill.model');
 
 //database connection
-if (!config.has('database')) {
-  console.error('Nem találom az adatbázist a config fileban!');
-  process.exit();
-}
-var {username, password, host} = config.get('database');
-mongoose
-  .connect(`mongodb+srv://${username}:${password}@${host}`,{
+mongoose.connect('mongodb://localhost:27017/na', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -22,6 +16,15 @@ mongoose
     process.exit();
   });
 
+  //MongoDb test
+  var Cat = mongoose.model('Cat', {name: String});
+  var kitty = new Cat({name: 'Miska'});
+  kitty.save(function (err) {
+    if (err) {
+      console.log(err);
+        }
+    console.log('Miska létrehozva');
+  });
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Dashboard' });
@@ -37,9 +40,10 @@ router.get('/form', function(req, res, next) {
   res.render('form', { title: 'Form' });
 });
 
-router.get('/bill', function(req, res, next) {
-  billModel.find( {}, (err, bills) => {
-    res.render('index', { title: 'Számlák', bills: bills});
+router.get('/bill', function(req, res) {
+  billModel.find({'shopper': 'Hadik'},  function (err, bill) {
+    if (err) return console.error (err);
+    console.log(bill.shopper);
   });
 });
 
