@@ -1,0 +1,37 @@
+extends layout
+
+block content
+	main
+		.container.mt-5
+			.row
+				.col-xs-6
+					h1 Adatfelvételi űrlap
+						a.btn.btn-primary.float-right(href='/character/new') New
+						form.mt-5
+								#form1(role='form' action='/character/new' method='post' name='form1')
+									.row
+										label(for='name') Neve:
+										input.lastname(type='text' name='name' placeholder='neve' required='')
+									.row.mt-3
+										label(for='age') Kora:
+										input.firstname(type='text' name='age' placeholder='kora' required='')
+									.row.mt-3
+										label(for='rank') Rangja:
+										input.email(type='text' name='rank' placeholder='rangja')
+									.row.mt-5
+										input#elkuld.mr-3.ml-3(type='submit' name='elkuld' value='Feldolgozás')
+										input#elkuld.mr-3(type='button' name='elkuld' value='Gomb tipus')
+										input#torles(type='reset' name='torles' value='Alaphelyzet')
+				.row.col-lg-12.mt-2
+					table.table.table-striped
+						thead
+							tr
+								th Karakter neve
+								th Kora
+								th Rangja
+						tbody
+						each item in chars
+							tr
+								td=item.name
+								td=item.age
+								td=item.rank

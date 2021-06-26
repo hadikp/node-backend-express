@@ -1,0 +1,38 @@
+extends layout
+
+block content
+	main
+		.container.mt-5
+			.row
+				.col-xs-6
+					h1 Adatfelvételi űrlap
+						form.mt-5
+								#form1(role='form' action='/character/save-new' method='post' name='form1')
+									.row
+										label(for='lastname') Vezetéknév*:
+										input.lastname(type='text' name='lastname' placeholder='vezetéknév' required='')
+									.row.mt-3
+										label(for='firstname') Keresztnév*:
+										input.firstname(type='text' name='firstname' placeholder='keresztnév' required='')
+									.row.mt-3
+										label(for='email') Email:
+										input.email(type='text' name='email' placeholder='email')
+									.row.mt-3
+										label(for='phone') Telefonszám*:
+										input.phone(type='text' name='phone' placeholder='06-20-3225678' required='')
+									.row.mt-3.ml-2
+										fieldset
+											legend Lakcím
+											.row
+												label Irányítószám*:
+												input.zip(type='text' name='zip' placeholder='3211')
+											.row.mt-3
+												label(for='city') Város*:
+												input.phone(type='text' name='city' placeholder='város' required='')
+											.row.mt-3
+												label(for='street') Utca*:
+												input.phone(type='text' name='street' placeholder='utca' required='')
+									.row.mt-5
+										input#elkuld.mr-3.ml-3(type='submit' name='elkuld' value='Feldolgozás')
+										input#elkuld.mr-3(type='button' name='elkuld' value='Gomb tipus')
+										input#torles(type='reset' name='torles' value='Alaphelyzet')

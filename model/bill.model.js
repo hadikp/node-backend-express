@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var BillSchema = new mongoose.Schema({
+var BillSchema = mongoose.Schema({
     billName: String,
     shopper: String,
     count: Number

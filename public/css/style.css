@@ -1,0 +1,49 @@
+body {
+    background-color: beige;
+}
+.container {
+    background-color: aliceblue;
+    width: 30%;
+    min-width: 12rem;
+    padding: 20px;
+    border: 2px solid #00e;
+    border-radius: 8px;
+}
+
+#form1 label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 10rem;
+    float: left;
+    padding-left: 20px;
+   }
+   #form1 input[type="text"],#form1 input[type="password"],#form1 input[type="date"],#form1 input[type="file"],#form1 select{
+    font-size: 1.2rem;
+    border-radius: 4px;
+    background-color: #cfeaa5;
+    color: darkgreen;
+    width: 55%;
+   }
+   #form1 fieldset{
+    border: 3px blue solid;
+    padding: 20px;
+   }
+   #form1 legend{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: red;
+   }
+   #form1 textarea{
+    width: 72%;
+    resize: none;
+   }
+   #elkuld, #elkuld1, #torles{
+    padding: 10px;
+    background-color: forestgreen;
+    border: solid 2px black;
+    border-radius: 8px;
+    color: beige;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+   }

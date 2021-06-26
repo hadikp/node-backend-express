@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Űrlapok</title>
+ <link rel="stylesheet" href="CSS/urlap.css">
+</head>
+
+<body>
+ <main class="container">
+  <h1>Adatfelvételi űrlap</h1>
+  <form action="urlap2.html" method="post" name="form1" id="form1" enctype="multipart/form-data">
+   <p>
+   <label for="vnev">Vezetéknév:</label>
+   <input type="text" name="lastname" class="lastname"  placeholder="vezetéknév"  required>
+   </p>
+   <p>
+   <label for="knev">Keresztnév:</label>
+   <input type="text" name="knev" id="knev" placeholder="Ide jön a keresztnév"  required>
+   </p>
+   <p>
+   <label>Jelszó:</label>
+   <input type="password" name="jelszo" id="jelszo" placeholder="Jelszó"  required>
+   </p>
+   <p>
+   <label>Születési idő:</label>
+   <input type="date" name="szulido" id="szulido" placeholder="születési idő">
+   </p>
+   <fieldset>
+    <legend>Lakcím</legend>
+    <p>
+    <label>Zip:</label>
+    <input type="date" name="zip" class="zip" placeholder="3211">
+     </p>
+   </fieldset>
+   <fieldset>
+    <legend>Neme</legend>
+    <p><label>Férfi</label>
+    <input type="radio" name="neme" id="ffi" checked><p>
+    <p><label>Nő</label>
+    <input type="radio" name="neme" id="no"><p>
+    <p><label>Egyéb</label>
+    <input type="radio" name="neme" id="egyeb"><p>
+   </fieldset>
+   <p><label>Foglalkozása</label>
+   <select name="foglalkozas" id="foglalkozas" required>
+   <option value="" selected>--Kérem válasszon--</option>
+   <option value="diak">Diák</option>
+   <option value="nyugdijas">Nyugdíjas</option>
+   <option value="felhobodorito">Felhőbodorító</option>
+   <option value="takarito">Takarító</option>
+   </select></p>
+   <label>Egyéb közlendők</label>
+   <p><textarea name="megjegyzes" id="megjegyzes" cols="30" rows="10" maxlength="20"></textarea></p>
+   <p><label>Csatolandó file:</label>
+   <input type="file" name="fajl" id="fajl"></p>
+   <p><label>&nbsp;</label>
+    <input type="submit" name="elkuld" id="elkuld" value="Feldolgozás">
+    &nbsp;
+    <input type="button" name="elkuld" id="elkuld" value="Gomb tipus">
+    &nbsp;
+    <input type="reset" name="torles" id="torles" value="Alaphelyzet">
+    &nbsp;
+    <p>
+  </form>
+ </main>
+</body>
+</html>
